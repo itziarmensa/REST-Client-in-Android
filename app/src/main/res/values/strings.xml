@@ -2,4 +2,12 @@
     <string name="app_name">RestClient</string>
     <string name="list_of_tracks">List of Tracks!</string>
     <string name="message">Message</string>
+    <string name="tracks">Tracks!</string>
+    <string name="add_a_new_track">Add a new track:</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="add">Add</string>
+    <string name="see_the_list_of_tracks">See the list of tracks</string>
+    <string name="add_a_new_track_">Add a new track</string>
+    <string name="tracks_">Tracks!</string>
 </resources>
