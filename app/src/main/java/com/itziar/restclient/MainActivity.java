@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> listDatos;
+    ArrayList<TrackVo> listTracks;
     RecyclerView recycler;
 
     @Override
@@ -21,14 +21,16 @@ public class MainActivity extends AppCompatActivity {
         recycler = (RecyclerView) findViewById(R.id.recyclerId);
         recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        listDatos = new ArrayList<>();
+        listTracks = new ArrayList<>();
 
-        for(int i = 0; i <= 50; i++){
-            listDatos.add("Track #"+i+" ");
-        }
+        addTrack();
 
-        AdapterDatos adapterDatos = new AdapterDatos(listDatos);
+        AdapterDatos adapterDatos = new AdapterDatos(listTracks);
         recycler.setAdapter(adapterDatos);
 
+    }
+
+    private void addTrack() {
+        listTracks.add(new TrackVo("Punto40","Canción buena"));
     }
 }

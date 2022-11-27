@@ -12,24 +12,22 @@ import java.util.ArrayList;
 
 public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolder> {
 
-    ArrayList<String> listDatos;
+    ArrayList<TrackVo> listTracks;
 
-    public AdapterDatos(ArrayList<String> listDatos) {
-        this.listDatos = listDatos;
+    public AdapterDatos(ArrayList<TrackVo> listTracks) {
+        this.listTracks = listTracks;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView dato;
+        TextView Title,description;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            dato = (TextView) itemView.findViewById(R.id.idDato);
+            Title = (TextView) itemView.findViewById(R.id.title);
+            description = (TextView) itemView.findViewById(R.id.description);
         }
 
-        public void asignarDatos(String info) {
-            dato.setText(info);
-        }
     }
 
     @NonNull
@@ -43,11 +41,12 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolder> 
 
     @Override //Hace la comunicación entre el adaptador y la clase ViewHolder
     public void onBindViewHolder(@NonNull AdapterDatos.ViewHolder holder, int position) {
-        holder.asignarDatos(listDatos.get(position));
+        holder.Title.setText(listTracks.get(position).getTitle());
+        holder.description.setText(listTracks.get(position).getDescription());
     }
 
     @Override
     public int getItemCount() {
-        return listDatos.size();
+        return listTracks.size();
     }
 }
