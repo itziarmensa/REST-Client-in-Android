@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainRecycler">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,9 +12,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="List of tracks"
+        android:text="@string/list_of_tracks_"
         android:textColor="#009688"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerId"
@@ -22,6 +22,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7DB37F"
+        android:text="@string/addtrack"
+        android:textColor="#4E342E"
+        android:translationX="150dp"
+        android:translationY="500dp"
+        android:onClick="activityAdd"/>
 
 
 </RelativeLayout>

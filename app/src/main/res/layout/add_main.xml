@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity1">
+    tools:context=".MainAdd">
 
     <EditText
         android:id="@+id/addTitle"
@@ -13,9 +13,9 @@
         android:layout_marginTop="150dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Title"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="@string/title"
         android:textColor="#100F0F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,9 +28,9 @@
         android:layout_marginTop="20dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Singer"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="@string/description"
         android:textColor="#090909"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         android:id="@+id/addTrack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="300dp"
         android:backgroundTint="#A59198"
         android:onClick="buttonAddTrack"
@@ -56,10 +56,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
         android:backgroundTint="#A59198"
-        android:onClick="seeList"
-        android:text="@string/see_the_list_of_tracks"
+        android:onClick="cancel"
+        android:text="Cancel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toEndOf="@+id/addTrack"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#F44336" />
@@ -68,21 +68,11 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/tracks_"
+        android:layout_marginTop="72dp"
+        android:text="Add a new track!"
         android:textColor="#009688"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/add_a_new_track_"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

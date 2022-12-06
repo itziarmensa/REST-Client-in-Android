@@ -5,22 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.itziar.restclient.models.Track;
+
 import java.util.ArrayList;
 
-public class MainActivity1 extends AppCompatActivity {
+public class MainAdd extends AppCompatActivity {
 
-    ArrayList<TrackVo> listTracks;
+    ArrayList<Track> listTracks;
 
     EditText title,desc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.add_main);
 
         listTracks = new ArrayList<>();
 
@@ -29,19 +30,21 @@ public class MainActivity1 extends AppCompatActivity {
 
     }
 
-    public void seeList(View view) {
-        Intent i = new Intent(MainActivity1.this,MainActivity.class);
+    public void cancel(View view) {
+        Intent i = new Intent(MainAdd.this, MainRecycler.class);
         startActivity(i);
     }
 
-    private void addTrack(String title, String desc) {
-        listTracks.add(new TrackVo(title,desc));
+    private void addTrack(String id, String title, String desc) {
+        listTracks.add(new Track(id,title,desc));
     }
 
-    public void buttonAddTrack(View view){
+    /*public void buttonAddTrack(View view){
         String addTitle = title.getText().toString();
         String addDesc = desc.getText().toString();
         addTrack(addTitle,addDesc);
         Toast.makeText(getApplicationContext(),"Added correctly", Toast.LENGTH_LONG).show();
-    }
+        Intent i = new Intent(MainAdd.this, MainRecycler.class);
+        startActivity(i);
+    }*/
 }

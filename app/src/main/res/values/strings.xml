@@ -10,4 +10,6 @@
     <string name="see_the_list_of_tracks">See the list of tracks</string>
     <string name="add_a_new_track_">Add a new track</string>
     <string name="tracks_">Tracks!</string>
+    <string name="list_of_tracks_">List of tracks</string>
+    <string name="addtrack">AddTrack</string>
 </resources>
